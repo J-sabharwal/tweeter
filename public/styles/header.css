@@ -1,0 +1,23 @@
+header {
+  position: relative;
+  padding-top: 80px;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(231, 166, 80);
+  background-image: url(../images/asfalt-light.png);
+  color: white;
+}
+
+
+.person {
+  margin: 5px;
+  font-size: 30px;
+}
+
+#fname {
+  font-weight: 500;
+}
+#lname {
+  font-weight: 300;
+}

@@ -1,0 +1,23 @@
+nav {
+  position: fixed;
+  top: 0;
+  height: 80px; /* Height of Blue Navbar */
+  width: 100%;
+  z-index: 2000; 
+  background-color: #4056A1;
+  color: #ffffff;
+  padding:  1em;
+}
+
+#tweet {
+  float: right;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#arrow {
+  font-size: smaller;
+  margin-right: 65px;
+  float: right;
+}
