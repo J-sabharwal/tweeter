@@ -16,7 +16,6 @@ html {
 
  nav {
    font-family: 'Source Sans Pro', sans-serif;
-   
  }
 
 body {
@@ -31,6 +30,7 @@ body {
  */
 
 .container {
+  padding-top: 400px;
   margin: auto;
   background-color: #f4f1ec;
   width: 90%;

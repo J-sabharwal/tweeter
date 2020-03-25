@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+  <textarea name="test" id="test" cols="30" rows="10"></textarea>
+  <!-- When in textbox and typing the event is logged -->
+  <script> var textarea = document.getElementById('test');
+    textarea.addEventListener("keydown", (event) => {
+      console.log(event)
+  
+    });
+    textarea.addEventListener("keyup", (event) => {
+      console.log(event)
+  
+    });
+    textarea.addEventListener("change", (event) => {
+      console.log(event)
+  
+    });
+    textarea.addEventListener("keypress", (event) => {
+      console.log(event)
+  
+    });</script>
+</body>
+</html>
