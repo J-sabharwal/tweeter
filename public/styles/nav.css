@@ -9,14 +9,14 @@ nav {
   padding:  1em;
 }
 
-#tweet {
+nav #tweet-down {
   float: right;
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
 
-#arrow {
+nav #arrow-down {
   font-size: smaller;
   margin-right: 65px;
   float: right;

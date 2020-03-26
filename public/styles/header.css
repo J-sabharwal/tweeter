@@ -4,33 +4,20 @@
   height: 400px;
   width: 100%;
   text-align: center;
-  background-color: rgb(231, 166, 80);
+  background-color: rgb(167, 117, 193);
   background-image: url(../images/asfalt-light.png);
   color: white;
 }
 
-.person {
+#main-header .person {
   margin: 5px;
   font-size: 30px;
 }
 
-.fname {
+#main-header .fname {
   font-weight: 500;
 }
 
-.lname {
+#main-header .lname {
   font-weight: 300;
-}
-
-#main-footer {
-  position: sticky;
-	width: 100%;
-	bottom: 0;
-	background-color: #4056A1;
-	color: white;
-	height: 40px;
-  font-size: 12px;
-  text-align: center;
-  padding-top: 10px;
-	font-family: 'Source Sans Pro';
 }

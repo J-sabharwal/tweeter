@@ -1,3 +1,7 @@
+.compose-title {
+  font-size: 25px;
+}
+
 .tweet-form {
   display: block;
   justify-content: end;
@@ -32,7 +36,8 @@
   float: right;
 }
 
-#zeroCounter{
+/* When counter reaches Zero id changes to zero counter */
+#zero-counter{
   color: red;
   font-family: bungee;
   font-weight: 700;
@@ -40,40 +45,42 @@
   float: right;
 }
 
-article {
+.new-tweet {
   margin-top: 40px;
   margin-bottom: 40px;
   box-sizing: border-box;
   border: solid #545149;
-  font-size: 16px;
   padding: 10px;
   background-color: white;
 }
 
-article img {
+.new-tweet img {
   width: 30px;
   height: 30px;
-  color: #545149;
-  margin-right: 10px;
+  margin-right: 10px; 
+}
+.user-name {
+  font-size: 15px;
+  position: relative;
 }
 
-article:hover {
+.new-tweet:hover {
   box-shadow: 7px 7px 5px gray;
 }
 
-article h2 {
+.new-tweet h2 {
   margin: 0;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   font-size: 20px;
   font-weight: 500;
 }
-p {
+.new-tweet p {
   padding-left: 10px;
   padding-right: 7px;
   font-size: 18px;
 }
 
-article footer {
+.new-tweet footer {
   padding-top: 10px;
   border-top: solid #545149;
   border-spacing: 1px;
@@ -84,6 +91,6 @@ article footer {
 
 .fonts {
   float: right;
-  letter-spacing: 4px;
+  letter-spacing: 10px;
   color: #4056A1;
 }

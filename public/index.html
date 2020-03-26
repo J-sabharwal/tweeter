@@ -30,9 +30,9 @@
     <nav>
       <div>
       <span style="font-family: bungee">tweeter</span>
-        <a id="tweet" href="#"><strong>Write</strong> a new tweet</a> 
+        <a id="tweet-down" href="#"><strong>Write</strong> a new tweet</a> 
       </div>
-      <i id="arrow" class="fa fa-angle-double-down"></i>
+      <i id="arrow-down" class="fa fa-angle-double-down"></i>
     </nav>
     <header id="main-header">
       <div>
@@ -47,8 +47,8 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+      <section class="compose-tweet">
+        <h2 class="compose-title">Compose Tweet</h2>
         <form class="tweet-form" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea data-length="140" name="text" id="tweets-text"></textarea>
@@ -56,40 +56,7 @@
           <output name="counter" id="counter" for="tweet-text">140</output>
         </form>
       </section>  
-      <section id="all-tweets">
-        <article >
-          <header>
-            <h2>
-              <img src="./images/woman.svg" alt="femaleicon">
-              <span >Jane Smith</span>
-            </h2>
-          </header>
-          <p>Test text for the individual tweets!!</p>
-          <footer>1 day ago
-            <span class="fonts">
-              <i class="fa fa-flag"></i>
-              <i class="fa fa-retweet"></i>
-              <i class="fa fa-heart"></i>
-            </span>
-          </footer>
-        </article>  
-        <article >
-          <header>
-            <h2>
-              <img src="./images/man.svg" alt="maleicon">
-              <span >John Osborne</span>
-            </h2>
-          </header>
-          <p>Test text for the individual tweets!!</p>
-          <footer>1 day ago
-            <span class="fonts">
-              <i class="fa fa-flag"></i>
-              <i class="fa fa-retweet"></i>
-              <i class="fa fa-heart"></i>
-            </span>
-          </footer>
-        </article> 
-      </section>   
+      <section id="tweets-container"></section>   
     </main>
     <footer id="main-footer">&copy; Copyright 2020 | Designed by Jas Sabharwal</footer>
   </body>
