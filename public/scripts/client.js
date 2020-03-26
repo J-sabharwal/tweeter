@@ -61,14 +61,26 @@ $(document).ready(() => {
   // handle the submit event that gets emitted by the form and prevent its default behaviour of sending the post request and reloading the page.
   //Post request for the tweet
   $form.on('submit', (event) => {
+    // Stops page reload submission
     event.preventDefault();
-    // Form data formatted into query string using serialize
-    const formInfo = $form.serialize();
+    const data = $('#tweets-text').val().trim();
+    var length = data.length;
 
-    $.post('/tweets', formInfo)
-    .then((response) => {
-      loadTweets();
-    });
+    if (length <= 0 || data === "" || length === null) {
+      alert('Error: Tweet field empty!');
+    } else if (length > 140) {
+      alert('Error: Tweet field too long!');
+    } else {
+
+    // Form data formatted into query string using serialize
+      const formInfo = $form.serialize();
+
+      $.post('/tweets', formInfo)
+      .then((response) => {
+        loadTweets();
+        $('#tweets-text').val("");
+      });
+    }
   });
 
   // Calling loadTweets function at click of the tweet button
