@@ -6,31 +6,6 @@
 $(document).ready(() => {
   const $form = $('form');
 
-  const tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
   const timestamp = function(tweetTime) {
     let date = new Date();
     let nowTime = Math.floor(date.getTime());
@@ -39,20 +14,22 @@ $(document).ready(() => {
     return noOfDays;
   };
 
+  // Generating tweets onto to page
   const renderTweets = function(tweets) {
-  // $('#tweets-container').empty();
+    $('#tweets-container').empty();
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $('#tweets-container').append($tweet);
     }
   };
   
+  // Adding the data to the relevant tags from renderTweets
   const createTweetElement = function(tweet) {
     const $article = $('<article>').addClass('new-tweet');
     
     // Header
     const $image = $('<img>').attr('src', tweet.user.avatars);
-    const $user = $('<span>').addClass('.user-name').text(tweet.user.name);
+    const $user = $('<span>').addClass('user-name').text(tweet.user.name);
   
     //Body
     const $body = $('<p>').text(tweet.content.text);
@@ -71,16 +48,32 @@ $(document).ready(() => {
   
     return $article;
   };
-  renderTweets(tweetData);
 
+  // Fetching the tweets (GET request) then rendering to page in RenderTweet function
+  const loadTweets = function() {
+    $.getJSON('/tweets')
+      .then((tweets) => {
+      renderTweets(tweets);
+    });
+  }
+  loadTweets();
+
+  // handle the submit event that gets emitted by the form and prevent its default behaviour of sending the post request and reloading the page.
+  //Post request for the tweet
   $form.on('submit', (event) => {
     event.preventDefault();
+    // Form data formatted into query string using serialize
     const formInfo = $form.serialize();
 
     $.post('/tweets', formInfo)
     .then((response) => {
-      console.log(response);
+      loadTweets();
     });
   });
 
+  // Calling loadTweets function at click of the tweet button
+  // const $button = $('#tweet-btn');
+  // $button.click(() => {
+  //   loadTweets();
+  // });
 });
