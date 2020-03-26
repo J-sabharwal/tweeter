@@ -53,7 +53,7 @@ $(document).ready(() => {
   const loadTweets = function() {
     $.getJSON('/tweets')
       .then((tweets) => {
-      renderTweets(tweets);
+      renderTweets(tweets.reverse());
     });
   }
   loadTweets();
