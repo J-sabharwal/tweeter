@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
-
+  const $form = $('form');
 
   const tweetData = [
     {
@@ -72,4 +72,15 @@ $(document).ready(() => {
     return $article;
   };
   renderTweets(tweetData);
+
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    const formInfo = $form.serialize();
+
+    $.post('/tweets', formInfo)
+    .then((response) => {
+      console.log(response);
+    });
+  });
+
 });
