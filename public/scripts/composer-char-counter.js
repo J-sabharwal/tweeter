@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(this).parents().find('output').text(maxCount);
 
     if (maxCount < 1) {
-      $(this).parents().find('output').attr('id', 'zeroCounter');
+      $(this).parents().find('output').attr('id', 'zero-counter');
     } else {
       $(this).parents().find('output').attr('id', 'counter');
     }
