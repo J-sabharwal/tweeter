@@ -14,31 +14,41 @@ html {
  * Global layout stuff
  */
 
- nav {
-   font-family: 'Source Sans Pro', sans-serif;
- }
-
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
-.container {
-  padding-top: 400px;
-  margin: auto;
-  background-color: #f4f1ec;
-  width: 90%;
- }
-
+@media (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 400px;
+    margin: auto;
+    background-color: #f4f1ec;
+    width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    display: block;
+    flex-wrap: wrap;
+    float: right;
+    z-index: 2;
+    padding-top: 100px;
+    margin: 40px;
+    background-color: #f4f1ec;
+    width: 50%;
+  }
+}
 
 #main-footer {
-  position: sticky;
+  position: fixed;
 	width: 100%;
 	bottom: 0;
 	background-color: #4056A1;
@@ -47,5 +57,5 @@ body {
   font-size: 12px;
   text-align: center;
   padding-top: 10px;
-	font-family: 'Source Sans Pro';
+
 }

@@ -1,95 +1,215 @@
-.compose-title {
-  font-size: 25px;
+@media (max-width: 1023px) {
+  .error-msg {
+    display: none;
+    padding: 10px;
+    padding-left: 80px;
+    border: solid red;
+    color: red;
+  }
+
+  .compose-title {
+    font-size: 25px;
+  }
+
+  .tweet-form {
+    display: block;
+    justify-content: end;
+  }
+
+  #tweets-text {
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 2px solid #545149;
+    width: 100%;
+    height: 40px;
+    background-color: #f4f1ec;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 505;
+    color: #545149;
+  }
+
+  #tweet-btn {
+    background-color: #4056A1;
+    font-family: bungee;
+    font-size: 14px;
+    color: white;
+  }
+
+  #counter {
+    font-family: bungee;
+    font-weight: 700;
+    font-size: 16px;
+    float: right;
+  }
+
+  /* When counter reaches Zero id changes to zero counter */
+  #zero-counter{
+    color: red;
+    font-family: bungee;
+    font-weight: 700;
+    font-size: 16px;
+    float: right;
+  }
+
+  .new-tweet {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    border: solid #545149;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .new-tweet img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; 
+  }
+  .user-name {
+    font-size: 15px;
+  }
+
+  .new-tweet:hover {
+    box-shadow: 7px 7px 5px gray;
+  }
+
+  .new-tweet h2 {
+    margin: 0;
+    /* padding-left: 20px; */
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .new-tweet p {
+    flex-wrap: wrap;
+    flex: 1 1 0;
+    padding-left: 10px;
+    padding-right: 7px;
+    font-size: 18px;
+  }
+
+  .new-tweet footer {
+    padding-top: 10px;
+    border-top: solid #545149;
+    border-spacing: 1px;
+    margin-left: 11px;
+    margin-right: 11px;
+    font-size: 12px;
+  }
+
+  .fonts {
+    float: right;
+    letter-spacing: 10px;
+    color: #4056A1;
+  }
 }
 
-.tweet-form {
-  display: block;
-  justify-content: end;
-}
+@media (min-width: 1024px) {
+  .error-msg {
+    display: none;
+    padding: 10px;
+    padding-left: 80px;
+    border: solid red;
+    color: red;
+  }
 
-#tweets-text {
-  padding: 10px;
-  border: none;
-  outline: none;
-  resize: none;
-  border-bottom: 2px solid #545149;
-  width: 100%;
-  height: 40px;
-  background-color: #f4f1ec;
-  font-family: 'Source Sans Pro';
-  font-size: 14px;
-  font-weight: 505;
-  color: #545149;
-}
+  .compose-title {
+    font-size: 25px;
+  }
 
-#tweet-btn {
-  background-color: #4056A1;
-  font-family: bungee;
-  font-size: 14px;
-  color: white;
-}
+  .tweet-form {
+    display: block;
+    justify-content: end;
+  }
 
-#counter {
-  font-family: bungee;
-  font-weight: 700;
-  font-size: 16px;
-  float: right;
-}
+  #tweets-text {
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 2px solid #545149;
+    width: 100%;
+    height: 40px;
+    background-color: #f4f1ec;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 505;
+    color: #545149;
+  }
 
-/* When counter reaches Zero id changes to zero counter */
-#zero-counter{
-  color: red;
-  font-family: bungee;
-  font-weight: 700;
-  font-size: 16px;
-  float: right;
-}
+  #tweet-btn {
+    background-color: #4056A1;
+    font-family: bungee;
+    font-size: 14px;
+    color: white;
+  }
 
-.new-tweet {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  box-sizing: border-box;
-  border: solid #545149;
-  padding: 10px;
-  background-color: white;
-}
+  #counter {
+    font-family: bungee;
+    font-weight: 700;
+    font-size: 16px;
+    float: right;
+  }
 
-.new-tweet img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px; 
-}
-.user-name {
-  font-size: 15px;
-}
+  /* When counter reaches Zero id changes to zero counter */
+  #zero-counter{
+    color: red;
+    font-family: bungee;
+    font-weight: 700;
+    font-size: 16px;
+    float: right;
+  }
 
-.new-tweet:hover {
-  box-shadow: 7px 7px 5px gray;
-}
+  .new-tweet {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    border: solid #545149;
+    padding: 10px;
+    background-color: white;
+  }
 
-.new-tweet h2 {
-  margin: 0;
-  /* padding-left: 20px; */
-  font-size: 20px;
-  font-weight: 500;
-}
-.new-tweet p {
-  padding-left: 10px;
-  padding-right: 7px;
-  font-size: 18px;
-}
+  .new-tweet img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; 
+  }
+  .user-name {
+    font-size: 15px;
+  }
 
-.new-tweet footer {
-  padding-top: 10px;
-  border-top: solid #545149;
-  border-spacing: 1px;
-  margin-left: 11px;
-  margin-right: 11px;
-  font-size: 12px;
-}
+  .new-tweet:hover {
+    box-shadow: 7px 7px 5px gray;
+  }
 
-.fonts {
-  float: right;
-  letter-spacing: 10px;
-  color: #4056A1;
+  .new-tweet h2 {
+    margin: 0;
+    /* padding-left: 20px; */
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .new-tweet p {
+    flex-wrap: wrap;
+    flex: 1 1 0;
+    padding-left: 10px;
+    padding-right: 7px;
+    font-size: 18px;
+  }
+
+  .new-tweet footer {
+    padding-top: 10px;
+    border-top: solid #545149;
+    border-spacing: 1px;
+    margin-left: 11px;
+    margin-right: 11px;
+    font-size: 12px;
+  }
+
+  .fonts {
+    float: right;
+    letter-spacing: 10px;
+    color: #4056A1;
+  }
 }

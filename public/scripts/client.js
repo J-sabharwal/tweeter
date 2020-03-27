@@ -53,9 +53,9 @@ $(document).ready(() => {
   const loadTweets = function() {
     $.getJSON('/tweets')
       .then((tweets) => {
-      renderTweets(tweets.reverse());
-    });
-  }
+        renderTweets(tweets.reverse());
+      });
+  };
   loadTweets();
 
   // handle the submit event that gets emitted by the form and prevent its default behaviour of sending the post request and reloading the page.
@@ -64,23 +64,29 @@ $(document).ready(() => {
     // Stops page reload submission
     event.preventDefault();
     const data = $('#tweets-text').val().trim();
-    var length = data.length;
+    let length = data.length;
 
     if (length <= 0 || data === "" || length === null) {
-      alert('Error: Tweet field empty!');
+      $('.error-msg').slideDown(300,() => {
+        const $error = $('.error-msg').text(" Invalid character entry. Try again! ");
+      });
     } else if (length > 140) {
-      alert('Error: Tweet field too long!');
+      $('.error-msg').slideDown(300, () => {
+        const $error = $('.error-msg').text(" Too Long! Try again!");
+      });
     } else {
-
-    // Form data formatted into query string using serialize
+      $('.error-msg').slideUp(300);
+      
+      // Form data formatted into query string using serialize
       const formInfo = $form.serialize();
 
       $.post('/tweets', formInfo)
-      .then((response) => {
-        loadTweets();
-        $('#tweets-text').val("");
-        $('#counter').val("140");
-      });
+        .then((response) => {
+          loadTweets();
+          $('#tweets-text').val("");
+          $('#counter').val("140");
+        });
+      
     }
   });
 

@@ -1,23 +1,42 @@
-#main-header {
-  position: fixed;
-  padding-top: 80px;
-  height: 400px;
-  width: 100%;
-  text-align: center;
-  background-color: rgb(167, 117, 193);
-  background-image: url(../images/asfalt-light.png);
-  color: white;
+@media (max-width: 1023px) {
+  #main-header {
+    position: fixed;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(167, 117, 193);
+    background-image: url(../images/asfalt-light.png);
+    color: white;
+  }
+  #main-header .person {
+    margin: 5px;
+    font-size: 30px;
+  }
+  #main-header .fname {
+    font-weight: 500;
+  }
 }
 
-#main-header .person {
-  margin: 5px;
-  font-size: 30px;
-}
-
-#main-header .fname {
-  font-weight: 500;
-}
-
-#main-header .lname {
-  font-weight: 300;
+/* Desktop View */
+@media (min-width: 1024px) {
+  #main-header{
+    position: absolute;
+    float: left;
+    margin: 160px 40px;
+    padding: 30px 0px;
+    background-color: rgb(167, 117, 193);
+    background-image: url(../images/asfalt-light.png);
+    height: auto;
+    width: 30%;
+    text-align: center;
+    color: white;
+  }
+  #main-header .person {
+    margin: 5px;
+    font-size: 30px;
+  }
+  #main-header .fname {
+    font-weight: 500;
+  }
 }
