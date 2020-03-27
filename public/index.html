@@ -29,7 +29,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <div>
-      <span style="font-family: bungee">tweeter</span>
+        <span style="font-family: bungee">tweeter</span>
         <a id="tweet-down" href="#"><strong>Write</strong> a new tweet</a> 
       </div>
       <i id="arrow-down" class="fa fa-angle-double-down"></i>
@@ -48,16 +48,17 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="compose-tweet">
-          <p class="error-msg"></p>
+        <p class="error-msg"></p>
         <h2 class="compose-title">Compose Tweet</h2>
         <form class="tweet-form" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea data-length="140" name="text" id="tweets-text"></textarea>
+          <textarea cols="40" wrap="hard" data-length="140" name="text" id="tweets-text"></textarea>
           <button id="tweet-btn" type="submit">Tweet</button>
           <output name="counter" id="counter" for="tweet-text">140</output>
         </form>
       </section>  
-      <section id="tweets-container"></section>   
+      <section id="tweets-container">
+      </section>   
     </main>
     <footer id="main-footer">&copy; Copyright 2020 | Designed by Jas Sabharwal</footer>
   </body>

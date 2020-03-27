@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     $(this).parents().find('output').text(maxCount);
 
-    if (maxCount < 1) {
+    if (maxCount < 0) {
       $(this).parents().find('output').attr('id', 'zero-counter');
     } else {
       $(this).parents().find('output').attr('id', 'counter');

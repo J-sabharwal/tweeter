@@ -17,6 +17,7 @@ $(document).ready(() => {
   // Generating tweets onto to page
   const renderTweets = function(tweets) {
     $('#tweets-container').empty();
+
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $('#tweets-container').append($tweet);
@@ -30,6 +31,7 @@ $(document).ready(() => {
     // Header
     const $image = $('<img>').attr('src', tweet.user.avatars);
     const $user = $('<span>').addClass('user-name').text(tweet.user.name);
+    const $handle = $('<span>').addClass('handle').text(tweet.user.handle);
   
     //Body
     const $body = $('<p>').text(tweet.content.text);
@@ -44,7 +46,7 @@ $(document).ready(() => {
     // Appended the span footer tag to tweet footer
     $footerspan.append($flag, $retweet, $heart);
     $footer.append($footerspan);
-    $article.append($image, $user, $body, $footer);
+    $article.append($image, $user, $handle, $body, $footer);
   
     return $article;
   };
@@ -56,6 +58,7 @@ $(document).ready(() => {
         renderTweets(tweets.reverse());
       });
   };
+
   loadTweets();
 
   // handle the submit event that gets emitted by the form and prevent its default behaviour of sending the post request and reloading the page.
@@ -86,13 +89,6 @@ $(document).ready(() => {
           $('#tweets-text').val("");
           $('#counter').val("140");
         });
-      
     }
   });
-
-  // Calling loadTweets function at click of the tweet button
-  // const $button = $('#tweet-btn');
-  // $button.click(() => {
-  //   loadTweets();
-  // });
 });

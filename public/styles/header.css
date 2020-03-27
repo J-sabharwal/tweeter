@@ -1,8 +1,9 @@
+/* Mobile and tablet View */
 @media (max-width: 1023px) {
   #main-header {
-    position: fixed;
+    position: absolute;
     padding-top: 80px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: center;
     background-color: rgb(167, 117, 193);
