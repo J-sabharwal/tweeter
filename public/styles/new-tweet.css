@@ -7,6 +7,9 @@
     color: red;
   }
 
+  .compose-tweet {
+    width: 100%;
+  }
   .compose-title {
     font-size: 25px;
   }
