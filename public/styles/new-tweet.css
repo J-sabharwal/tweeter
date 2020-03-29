@@ -35,6 +35,8 @@
   }
 
   #tweet-btn {
+    margin-top: 5px;
+    outline: none;
     background-color: #4056A1;
     font-family: bungee;
     font-size: 14px;
@@ -153,6 +155,8 @@
   }
 
   #tweet-btn {
+    margin-top: 5px;
+    outline: none;
     background-color: #4056A1;
     font-family: bungee;
     font-size: 14px;
