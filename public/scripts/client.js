@@ -71,11 +71,11 @@ $(document).ready(() => {
 
     if (length <= 0 || data === "" || length === null) {
       $('.error-msg').slideDown(300,() => {
-        const $error = $('.error-msg').text(" Invalid character entry. Try again! ");
+        const $error = $('.error-msg').text(" ⚠  Invalid character entry. Try again!  ⚠ ");
       });
     } else if (length > 140) {
       $('.error-msg').slideDown(300, () => {
-        const $error = $('.error-msg').text(" Too Long! Try again!");
+        const $error = $('.error-msg').text(" ⚠  Too Long! Try again!  ⚠  ");
       });
     } else {
       $('.error-msg').slideUp(300);
