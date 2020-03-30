@@ -10,6 +10,8 @@ nav {
 }
 
 nav #tweet-down {
+  background-color: #4056A1;
+  border: none;
   float: right;
   color: white;
   font-size: 18px;
@@ -20,4 +22,20 @@ nav #arrow-down {
   font-size: smaller;
   margin-right: 65px;
   float: right;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+nav #arrow-down:hover {
+  color: red;
+  animation: bounce 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
 }

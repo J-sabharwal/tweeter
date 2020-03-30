@@ -95,5 +95,5 @@ $(document).ready(() => {
 
   $newtweet.on('click', (event) => {
     $('.compose-tweet').slideToggle(300);
-  })
+  });
 });
