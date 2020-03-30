@@ -1,6 +1,7 @@
 @media (max-width: 1023px) {
-  .error-msg {
+    .error-msg {
     display: none;
+    font-family: 'Source Sans Pro';
     padding: 10px;
     padding-left: 80px;
     border: solid red;
@@ -8,6 +9,7 @@
   }
 
   .compose-tweet {
+    display: none;
     width: 100%;
   }
   .compose-title {
@@ -127,6 +129,7 @@
   }
 
   .compose-tweet {
+    display: none;
     width: 100%;
   }
 

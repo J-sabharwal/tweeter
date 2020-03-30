@@ -5,6 +5,7 @@
  */
 $(document).ready(() => {
   const $form = $('form');
+  const $newtweet = $('#tweet-down');
 
   const timestamp = function(tweetTime) {
     let date = new Date();
@@ -91,4 +92,8 @@ $(document).ready(() => {
         });
     }
   });
+
+  $newtweet.on('click', (event) => {
+    $('.compose-tweet').slideToggle(300);
+  })
 });
